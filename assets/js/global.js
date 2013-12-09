@@ -2,7 +2,7 @@ var Stripe = Stripe || {};
 var jQuery = jQuery || {};
 
 // this identifies your website in the createToken call below
-Stripe.setPublishableKey('pk_test_ZkDuj6p0boK1BNtRZcS1VVws');
+Stripe.setPublishableKey('STRIPE-PUBLISHABLE-API-KEY');
 
 function stripeResponseHandler(status, response) {
 	if (response.error) {
