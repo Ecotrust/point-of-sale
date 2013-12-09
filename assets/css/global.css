@@ -1,0 +1,163 @@
+body{
+	background-color: #424142;
+}
+.container {
+	background-color: #fff;
+	padding: 10px 30px;
+	width: 95%;
+}
+
+h1, label, legend, nav, button, thead{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+	h1, legend{
+		font-weight: 700;
+	}
+	header h1, h2{
+		margin-top: 0;
+	}
+
+nav{
+	margin-bottom: 3em;
+    margin-top: -3em;
+}
+.payment-success{
+	color: green;
+}
+.payment-errors{
+	color: red;	
+}
+
+form{
+	/*max-width: 730px;*/
+	margin-bottom: 200px;
+}
+	fieldset{
+		float: left;
+		margin-top: 2em;
+		width: 45%;
+	}
+	fieldset+fieldset{
+		margin-left: 6%;
+	}
+	.form-control {
+		width: 80%;
+	}
+	input+input, input+.form-inline{
+		margin-top: 5px;
+	}
+	.form-inline input{
+		width: auto;
+	}
+		.form-inline input+input{
+			margin-top: 0;
+		}
+	label span{
+		font-weight: normal;
+		color: #aaa;
+	}
+		label.counter{
+			color: #aaa;
+		}
+	textarea.form-control{
+		min-height: 140px;
+		width: 100%;
+	}
+	#submit-button{
+		clear: both;
+	}
+.customer-info {
+	border: 1px solid #ddd;
+	float: left;
+	padding: 5px 10px;
+	margin: -1em 0 1em 0;
+	width: 35%;
+}
+	.customer-info:after{
+		content: "";
+		clear: both;
+		display: table;
+	}
+	.customer-info h2 {
+		font-size: 1.4em;
+	}
+
+/******************
+ * TABLE
+ */
+
+table{
+	font-size: 80%;
+	table-layout: fixed;
+}
+	td, th{
+		max-width: 9%;
+	}
+
+	.paid-true {
+		color: green;
+	}
+	.paid-refunded, .paid-false{
+		color: red;
+	}
+	tbody tr:nth-child(odd) {
+	  background: #f2f2f2;
+	}	
+	.description div,.internal-notes div {
+		max-height: 200px;
+		overflow-y: auto;
+		width: 100%;
+	}
+	.paid-th, .amount-th, .fname-th, .lname-th{
+		max-width: 6%;
+		width: 5%;
+	}
+	td.email{
+		max-width 10%;
+	}
+	td.email, .email a, .charge-id {
+	   word-wrap: break-word;
+	}
+	th {
+		background-color: #AAAAAA;
+		border-right: 1px solid #EEEEEE;
+		color: #FFFFFF;
+	}
+		/*tablesort specific styling*/
+		th.sort-header {
+			cursor:pointer;
+		}
+		th.sort-header::-moz-selection,
+		th.sort-header::selection {
+			background:transparent;
+		}
+		.sort-header.sort-down, .sort-header.sort-up {
+			background-color: #CCCCCC;
+			color: #333333;
+		}
+		table th.sort-header:after {
+			content:'';
+			float:right;
+			margin-top:7px;
+			border-width:0 4px 4px;
+			border-style:solid;
+			border-color:#404040 transparent;
+			visibility:hidden;
+		}
+		table th.sort-header:hover:after {
+			visibility:visible;
+		}
+		table th.sort-up:after,
+		table th.sort-down:after,
+		table th.sort-down:hover:after {
+			visibility:visible;
+			opacity:0.4;
+		}
+		table th.sort-up:after {
+			border-bottom:none;
+			border-width:4px 4px 0;
+		}
+
+
+
