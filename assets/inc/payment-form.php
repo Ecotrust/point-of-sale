@@ -1,3 +1,8 @@
+<?php
+if ( API_MODE == 'test' ) : ?> 
+	<h4 class="text-danger">You have TEST MODE set in the config. Anything posted will not be charged to a customer.</h4>
+<?php endif; ?>
+
 <form action="charge.php" method="POST" id="payment-form" role="form" class="clearfix">
 
 	<fieldset>
@@ -32,16 +37,17 @@
 				<input type="text" size="10" name="zip" placeholder="Zip" class="form-control">
 		</div>
 		-->
+		<div class="form-group">
+			<label>Date of event (MM-DD-YYYY)</label>
+			<input type="text" name="date" placeholder="MM-DD-YYYY" class="form-control">
+		</div>
+
 
 		<div class="form-group">
 			<label>Salesforce Link</label>
 			<input type="text" name="sforceLink" value="<?php if(isset($_POST['sforceLink'])) echo $_POST['sforceLink']; ?>" placeholder="paste a url from salesforce" class="form-control">
 		</div>
 
-		<div class="form-group">
-			<label>Customer Note <span class="help">This will be included in the reciept emailed to the customer.</span></label>
-			<textarea type="text" name="description" placeholder="Customer facing notes" class="form-control"><?php if(isset($_POST['description'])) echo $_POST['description']; //white space is silly ?></textarea>
-		</div>
 
 	</fieldset>
 
@@ -80,22 +86,22 @@
 			<input type="text" name="nameoncard" placeholder="Name on card" class="form-control">
 		</div>
 
-		<div class="form-group">
+		<div class="form-group card-number">
 			<label>Card Number</label>
-			<input type="text" size="20" value="4242424242424242" autocomplete="off" placeholder="CC Number" class="card-number form-control"  required />
+			<input type="text" size="20" name="ccnum" autocomplete="off" placeholder="CC Number" class="card-number form-control"  required />
 		</div>
 
-		<div class="form-group">
+		<div class="form-group card-cvc">
 			<label>CVC/Secret Code</label>
-			<input type="text" size="4" value="123" autocomplete="off" placeholder="CVC" class="card-cvc form-control"  required />
+			<input type="text" size="4" autocomplete="off" name="cvc" placeholder="CVC" class="card-cvc form-control"  required />
 		</div>
 
 		<div class="form-group">
 			<label>Expiration (MM/YYYY)</label>
 			<div class="form-inline">
-				<input type="text" size="2" value="10" placeholder="Month" class="card-expiry-month form-control" required />
+				<input type="text" size="2"  placeholder="Month" class="card-expiry-month form-control" required />
 				<span> / </span>
-				<input type="text" size="4" value="2014" placeholder="Year" class="card-expiry-year form-control" required />
+				<input type="text" size="4"  placeholder="Year" class="card-expiry-year form-control" required />
 			</div>
 		</div>
 

@@ -67,6 +67,18 @@ form{
 	#submit-button{
 		clear: both;
 	}
+	div.card-number {
+		float: left;
+		width: 70%;
+	}
+	div.card-cvc {
+		float: left;
+		width: 25%;
+		margin-left: 3%;
+	}
+	div.card-cvc + div{
+		clear: both;
+	}
 .customer-info {
 	border: 1px solid #ddd;
 	float: left;
