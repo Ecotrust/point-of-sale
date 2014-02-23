@@ -45,7 +45,7 @@ if ( API_MODE == 'test' ) : ?>
 
 		<div class="form-group">
 			<label>Salesforce Link</label>
-			<input type="text" name="sforceLink" value="<?php if(isset($_POST['sforceLink'])) echo $_POST['sforceLink']; ?>" placeholder="paste a url from salesforce" class="form-control">
+			<input type="text" name="sforceLink" value="<?php if(isset($_POST['sforceLink'])) echo $_POST['sforceLink']; ?>" placeholder="paste a url from salesforce. http// required." class="form-control">
 		</div>
 
 
@@ -99,9 +99,9 @@ if ( API_MODE == 'test' ) : ?>
 		<div class="form-group">
 			<label>Expiration (MM/YYYY)</label>
 			<div class="form-inline">
-				<input type="text" size="2"  placeholder="Month" class="card-expiry-month form-control" required />
+				<input type="text" size="2" placeholder="Month" class="card-expiry-month form-control" required />
 				<span> / </span>
-				<input type="text" size="4"  placeholder="Year" class="card-expiry-year form-control" required />
+				<input type="text" size="4" placeholder="Year" class="card-expiry-year form-control" required />
 			</div>
 		</div>
 
