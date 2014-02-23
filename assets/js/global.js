@@ -1,9 +1,3 @@
-var Stripe = Stripe || {};
-var jQuery = jQuery || {};
-
-// this identifies your website in the createToken call below
-Stripe.setPublishableKey('STRIPE-PUBLISHABLE-API-KEY');
-
 function stripeResponseHandler(status, response) {
 	if (response.error) {
 		// re-enable the submit button
@@ -13,7 +7,7 @@ function stripeResponseHandler(status, response) {
 	} else {
 		var form$ = $("#payment-form"),
 		// token contains id, last4, and card type
-			token = response['id'];
+			token = response.id;
 		// insert the token into the form so it gets submitted to the server
 		form$.append("<input type='hidden' name='stripeToken' value='" + token + "' />");
 		// and submit
@@ -22,6 +16,7 @@ function stripeResponseHandler(status, response) {
 }
 
 $(document).ready(function () {
+
 	$("#payment-form").submit(function (event) {
 		// disable the submit button to prevent repeated clicks
 		$('.submit-button').attr("disabled", "disabled");
@@ -41,6 +36,7 @@ $(document).ready(function () {
 	if (document.getElementById('charges')) {
 		new Tablesort(document.getElementById('charges'));
 	}
+
 });
 
 /*!
