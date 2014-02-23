@@ -86,12 +86,12 @@ if ( API_MODE == 'test' ) : ?>
 			<input type="text" name="nameoncard" placeholder="Name on card" class="form-control">
 		</div>
 
-		<div class="form-group card-number">
+		<div class="form-group card-number-wrap">
 			<label>Card Number</label>
-			<input type="text" size="20" name="ccnum" autocomplete="off" placeholder="CC Number" class="card-number form-control"  required />
+			<input type="text" size="20" autocomplete="off" placeholder="CC Number" class="card-number form-control"  required />
 		</div>
 
-		<div class="form-group card-cvc">
+		<div class="form-group card-cvc-wrap">
 			<label>CVC/Secret Code</label>
 			<input type="text" size="4" autocomplete="off" name="cvc" placeholder="CVC" class="card-cvc form-control"  required />
 		</div>
