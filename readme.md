@@ -1,9 +1,9 @@
-# Simple interface to the Stripe API
+# Simple Point Of Sale type admin interface to the Stripe API
 ## Setup:
 
  1. copy `assets/inc/config-sample.php` to `assets/inc/config.php`
- 2. edit `config.php` and include your Stripe test or live secret API key
- 3. edit `assets/js/global.js` and include your Stripe test or live publishable API key
+ 2. edit `config.php` and include your Stripe API keys
+ 3. edit `config.php` and include your admin's email address
  4. $ git submodule init
  5. $ git submodule update
 
