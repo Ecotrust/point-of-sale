@@ -93,7 +93,7 @@ if ($_POST) {
 		<table>
 			<tr>
 				<th>Name</th>
-				<td> ' .$customer["metadata"]["First Name"] . $customer["metadata"]["Last Name"] . '</td>
+				<td> ' .$customer["metadata"]["First Name"] . ' ' .$customer["metadata"]["Last Name"] . '</td>
 			</tr>
 			<tr>
 				<th>Organization</th>
